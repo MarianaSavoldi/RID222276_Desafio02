@@ -60,18 +60,6 @@ ul li::before {
   column-gap: 1.5rem;
 }
 
-.main-post {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  background-image: linear-gradient(#6666664D, #000000B3), url('./images/city.jpg');
-  background-size: cover;
-  width: 100%;
-  height: 24.75rem;
-  padding: 1.5rem;
-  border-radius: 10px;
-}
-
 .first-post-content {
   display: flex;
   flex-direction: column;
@@ -99,12 +87,6 @@ ul li::before {
   text-decoration: underline;
   text-decoration-style: solid;
   text-decoration-thickness: 0%;
-}
-
-.recent-posts {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
 }
 
 .posts-wrapper {
@@ -173,12 +155,6 @@ ul li::before {
   color: #000000;
 }
 
-.popular-posts {
-  display: flex;
-  flex-direction: column;
-  gap: 1.25rem;
-}
-
 .popular-post-card {
   background-color: #FFF;
   border-radius: 10px;
@@ -241,6 +217,18 @@ ul li::before {
 }
 
 /* ids */
+#main-post {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-image: linear-gradient(#6666664D, #000000B3), url('./images/city.jpg');
+  background-size: cover;
+  width: 100%;
+  height: 24.75rem;
+  padding: 1.5rem;
+  border-radius: 10px;
+}
+
 #opinion {
   font-weight: 400;
   font-size: 1rem;
@@ -262,6 +250,18 @@ ul li::before {
   letter-spacing: 0%;
 }
 
+#recent-posts {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+#popular-posts {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
 #posts-categories {
   display: flex;
   flex-direction: column;
@@ -277,4 +277,55 @@ ul li::before {
   line-height: 100%;
   letter-spacing: 0;
   color: #616161;
+}
+
+@media only screen and (max-width: 1024px) {
+  aside .section-header {
+    padding: 0.5rem 1rem;
+  }
+
+  .main-content-wrapper {
+    padding: 1.5rem 0.5rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 1.5rem;
+  }
+
+  .header-container {
+    padding: 0.75rem 2rem;
+  }
+
+  .page-title {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .section-header {
+    padding: 0.5rem 1rem;
+    align-items: center;
+  }
+
+  #first-post-title {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .posts-wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media only screen and (max-width: 374px) {
+  .section-header h3 {
+    font-size: 1rem;
+  }
+
+  .section-header p {
+    font-size: 0.75rem;
+  }
+
+  .post-text {
+    font-size: 0.75rem;
+  }
 }
